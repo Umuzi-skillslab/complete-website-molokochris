@@ -1,28 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <title>Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <div class="header">
-        <h1>My Portfolio</h1>
-        <!-- Navigation missing -->
-    </div>
-    
-    <div class="hero">
-        <h2>Welcome to My Portfolio</h2>
-        <p>I am a web developer passionate about creating beautiful websites.</p>
-        <img src="images/hero.jpg">
-    </div>
-    
-    <div class="intro">
-        <h2>About Me</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    
-    <div class="footer">
-        <p>Contact me at email@example.com</p>
-    </div>
-</body>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>My Portfolio</h1>
+    </header>
+    <!-- Navigation missing -->
+    <nav>
+      <ul>
+        <a href="/">
+          <li>Home</li>
+        </a>
+        <a href="/projects.html">
+          <li>Projects</li>
+        </a>
+        <a href="/about.html">
+          <li>About</li>
+        </a>
+        <a href="/contact.html">
+          <li>Contact</li>
+        </a>
+      </ul>
+    </nav>
+
+    <main>
+      <section>
+        <article class="hero">
+          <h2>Welcome to My Portfolio</h2>
+          <p>
+            I am a web developer passionate about creating beautiful websites.
+          </p>
+          <img src="images/hero.jpg" alt="hero section image" />
+        </article>
+      </section>
+
+      <section>
+        <article class="intro">
+          <h2>About Me</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Contact me at <a href="mailto:email@example.com">email@example.com</a>
+      </p>
+    </footer>
+  </body>
 </html>
