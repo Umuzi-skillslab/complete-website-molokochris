@@ -1,30 +1,61 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+  <head>
     <title>Projects</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <div class="header">
-        <h1>My Projects</h1>
-    </div>
-    
-    <div>
-        <h2>Project 1</h2>
-        <img src="images/project1.jpg">
-        <p>A responsive website built with HTML and CSS.</p>
-    </div>
-    
-    <div>
-        <h2>Project 2</h2>
-        <img src="images/project2.jpg">
-        <p>An e-commerce site with modern design.</p>
-    </div>
-    
-    <!-- Third project missing -->
-    
-    <div class="footer">
-        <p>Contact me at email@example.com</p>
-    </div>
-</body>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>My Projects</h1>
+    </header>
+    <nav>
+      <ul>
+        <a href="/">
+          <li>Home</li>
+        </a>
+        <a href="/projects.html">
+          <li>Projects</li>
+        </a>
+        <a href="/about.html">
+          <li>About</li>
+        </a>
+        <a href="/contact.html">
+          <li>Contact</li>
+        </a>
+      </ul>
+    </nav>
+
+    <main>
+      <section>
+        <article>
+          <h2>Project 1</h2>
+          <img src="images/project1.jpg" alt="image of project 1" />
+          <p>A responsive website built with HTML and CSS.</p>
+        </article>
+      </section>
+
+      <section>
+        <article>
+          <h2>Project 2</h2>
+          <img src="images/project2.jpg" alt="image of project 2" />
+          <p>An e-commerce site with modern design.</p>
+        </article>
+      </section>
+
+      <!-- Third project missing -->
+      <section>
+        <article>
+          <h2>Project 3</h2>
+          <img src="images/project3.jpg" alt="image of project 3" />
+          <p>A mobile-first approach to web design using react native.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Contact me at <a href="mailto:email@example.com">email@example.com</a>
+      </p>
+    </footer>
+  </body>
 </html>
