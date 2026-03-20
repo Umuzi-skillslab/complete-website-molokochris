@@ -1,30 +1,114 @@
-<!DOCTYPE html>
-<html>
-<head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <div class="header">
-        <h1>Contact Me</h1>
-    </div>
-    
-    <div>
-        <h2>Get In Touch</h2>
-        
-        <form>
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Email">
-            <textarea placeholder="Message"></textarea>
-            
-            <!-- Missing: labels, more input types, validation -->
-            
-            <button>Send</button>
-        </form>
-    </div>
-    
-    <div class="footer">
-        <p>Contact me at email@example.com</p>
-    </div>
-</body>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Contact Me</h1>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html"> Home</a>
+        </li>
+        <li>
+          <a href="projects.html"> Projects </a>
+        </li>
+        <li>
+          <a href="about.html"> About </a>
+        </li>
+        <li>
+          <a href="contact.html"> Contact </a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <section>
+        <article>
+          <h2>Get In Touch</h2>
+
+          <form>
+            <label for="name">First Name:</label>
+            <input
+              type="text"
+              placeholder="Name"
+              id="name"
+              minlength="2"
+              required
+            />
+            <label for="email">Email Address:</label>
+            <input type="email" placeholder="Email" id="email" required />
+            <label for="message">Message:</label>
+            <textarea
+              placeholder="Message"
+              id="message"
+              minlength="10"
+              maxlength="100"
+              required
+            ></textarea>
+
+            <fieldset>
+              <legend>Do you want to be contacted?</legend>
+              <input type="radio" id="doContact" name="contact" value="yes" checked />
+              <label for="doContact">Yes</label><br />
+              <input
+                type="radio"
+                id="noneContact"
+                name="contact"
+                value="no"
+              />
+              <label for="noneContact">No</label><br />
+            </fieldset>
+
+            <fieldset class="source">
+              <legend>How did you hear about me?</legend>
+              <input
+                type="checkbox"
+                id="linkedin"
+                name="source"
+                value="linkedin"
+              />
+              <label for="linkedin">LinkedIn</label><br />
+              <input
+                type="checkbox"
+                id="dribbble"
+                name="source"
+                value="dribbble"
+              />
+              <label for="dribbble">Dribbble</label><br />
+              <input type="checkbox" id="social" name="source" value="social" />
+              <label for="social">Social Media</label><br />
+              <input type="checkbox" id="other" name="source" value="other" />
+              <label for="other">Other</label><br />
+            </fieldset>
+
+            <fieldset>
+              <label for="newsletter">
+                <input
+                  type="checkbox"
+                  id="newsletter"
+                  name="newsletter"
+                  value="yes"
+                />
+                Sign up for my newsletter
+              </label>
+            </fieldset>
+
+            <button type="submit">Send</button>
+          </form>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Contact me at <a href="mailto:email@example.com">email@example.com</a>
+      </p>
+    </footer>
+  </body>
 </html>
