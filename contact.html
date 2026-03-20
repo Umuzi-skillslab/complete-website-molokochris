@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
@@ -10,38 +12,97 @@
     </header>
     <nav>
       <ul>
-        <a href="/">
-          <li>Home</li>
-        </a>
-        <a href="/projects.html">
-          <li>Projects</li>
-        </a>
-        <a href="/about.html">
-          <li>About</li>
-        </a>
-        <a href="/contact.html">
-          <li>Contact</li>
-        </a>
+        <li>
+          <a href="index.html"> Home</a>
+        </li>
+        <li>
+          <a href="projects.html"> Projects </a>
+        </li>
+        <li>
+          <a href="about.html"> About </a>
+        </li>
+        <li>
+          <a href="contact.html"> Contact </a>
+        </li>
       </ul>
     </nav>
 
     <main>
-      <article>
-        <h2>Get In Touch</h2>
+      <section>
+        <article>
+          <h2>Get In Touch</h2>
 
-        <form>
-          <label for="name">First and Last Name:</label>
-          <input type="text" placeholder="Name" id="name" required />
-          <label for="name">Email Address:</label>
-          <input type="text" placeholder="Email" id="email" required />
-          <label for="name">Message:</label>
-          <textarea placeholder="Message" id="message" required></textarea>
+          <form>
+            <label for="name">First Name:</label>
+            <input
+              type="text"
+              placeholder="Name"
+              id="name"
+              minlength="2"
+              required
+            />
+            <label for="email">Email Address:</label>
+            <input type="email" placeholder="Email" id="email" required />
+            <label for="message">Message:</label>
+            <textarea
+              placeholder="Message"
+              id="message"
+              minlength="10"
+              maxlength="100"
+              required
+            ></textarea>
 
-          <!-- Missing: labels, more input types, validation -->
+            <fieldset>
+              <legend>Do you want to be contacted?</legend>
+              <input type="radio" id="doContact" name="contact" value="yes" checked />
+              <label for="doContact">Yes</label><br />
+              <input
+                type="radio"
+                id="noneContact"
+                name="contact"
+                value="no"
+              />
+              <label for="noneContact">No</label><br />
+            </fieldset>
 
-          <button>Send</button>
-        </form>
-      </article>
+            <fieldset class="source">
+              <legend>How did you hear about me?</legend>
+              <input
+                type="checkbox"
+                id="linkedin"
+                name="source"
+                value="linkedin"
+              />
+              <label for="linkedin">LinkedIn</label><br />
+              <input
+                type="checkbox"
+                id="dribbble"
+                name="source"
+                value="dribbble"
+              />
+              <label for="dribbble">Dribbble</label><br />
+              <input type="checkbox" id="social" name="source" value="social" />
+              <label for="social">Social Media</label><br />
+              <input type="checkbox" id="other" name="source" value="other" />
+              <label for="other">Other</label><br />
+            </fieldset>
+
+            <fieldset>
+              <label for="newsletter">
+                <input
+                  type="checkbox"
+                  id="newsletter"
+                  name="newsletter"
+                  value="yes"
+                />
+                Sign up for my newsletter
+              </label>
+            </fieldset>
+
+            <button type="submit">Send</button>
+          </form>
+        </article>
+      </section>
     </main>
 
     <footer class="footer">
