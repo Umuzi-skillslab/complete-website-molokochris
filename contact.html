@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
+
+    <!-- imported fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Kaushan+Script&family=Kavoon&family=Knewave&family=Londrina+Outline&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
@@ -54,14 +63,15 @@
 
             <fieldset>
               <legend>Do you want to be contacted?</legend>
-              <input type="radio" id="doContact" name="contact" value="yes" checked />
-              <label for="doContact">Yes</label><br />
               <input
                 type="radio"
-                id="noneContact"
+                id="doContact"
                 name="contact"
-                value="no"
+                value="yes"
+                checked
               />
+              <label for="doContact">Yes</label><br />
+              <input type="radio" id="noneContact" name="contact" value="no" />
               <label for="noneContact">No</label><br />
             </fieldset>
 
