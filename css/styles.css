@@ -11,15 +11,6 @@ body {
   font-style: normal;
 }
 
-body > div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  /* background-color: red; */
-}
-
 header {
   font-size: 0.5rem;
   text-align: center;
