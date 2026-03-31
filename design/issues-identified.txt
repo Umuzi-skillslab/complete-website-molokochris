@@ -1,0 +1,85 @@
+# Issues Identification Document
+
+## Portfolio Website Capstone Project
+
+**Author:** Moloko Chris Poopedi
+
+## HTML Issues (31 errors)
+
+### Global Issues (Affect all 4 pages)
+
+1. Missing 'charset' meta tag on all pages
+2. Missing 'viewport' meta on all pages
+3. No <header>, <nav>, <main>, <section>, <article>, <footer> semantic elements
+4. 'DOCTYPE' declaration is not consistent in all pages
+5. 'href="/"' as navigation link for home does not work locally
+6. Email addresses in the footers are plain text
+
+### index.html
+
+6. Hero image not showing
+7. Hero image missing alt attributes
+8. Bad Semantic structure
+9. Cannot navigate between pages
+10. Navigation is missing
+11. No <main> element wrapping page content
+
+### project.html
+
+12. Missing lang attribute on <html> tag
+13. Projects images broken or missing
+14. <img> tags do not have alt attributes
+15. No navigation menu
+16. No semantic structure, all <div> tags
+17. No <main> element
+
+### about.html
+
+18. Missing lang attribute on <html>
+19. Table completely missing
+20. Profile image missing
+21. <h3> used as first heading violating heading hierarchy
+22. No navigation menu
+23. No semantic structure
+24. No <main> element
+
+### contact.html
+
+25. Missing lang attribute on <html>
+26. Email inputs missing label elements entirely
+27. No form validation (required, minlength or pattern)
+28. Button missing type="submit" attribute
+29. No navigation menu
+30. No semantic structure
+31. No <main> element
+
+## CSS Errors found (12 Issues)
+
+32. Missing font fallback
+33. Poor color contrast in the .hero class
+34. Image responsiveness missing height attribute
+35. Form styling is not specific
+36. Footer alignment not right
+37. No consistent spacing system
+38. No pseudo-classes
+39. No navigation styling
+40. Form styling incomplete
+41. No hover effects
+42. Footer aligned improperly
+43. Inconsistent spacing and formatting
+
+## Approach to Fixing Issues
+
+- Updating all the pages to include proper 'charset' and 'viewport' meta tags.
+- Add proper semantic tags to fix the document structure, by wrapping the navigation 'li' items with anchor tags.
+- Fix contact form to include 5 input types (text, email, textarea, radio, and checkbox)
+- Adding correct label to the input fields
+- Adding consistent 'DOCTYPE' declaration across all pages
+- Adding more descriptive alt attribute text on image tags
+
+For CSS:
+
+- Expand the stylesheet to use 5+ selector types including element, class, ID, descendant, and pseudo-class
+- Adding hover and focus semantic classes to navigation links, form inputs and the footer anchor tag
+- Removing the lightblue hero background to fix the color contrast issues and adding background image instead
+- Center aligning the footer text content
