@@ -1,159 +1,289 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
+
+/* Base body styles - font, colour, margin, padding */
 
 body {
-  font-family: "Geist", sans-serif;
-  font-optical-sizing: auto;
+  font-family: "Questrial", sans-serif;
   font-weight: 400;
   font-style: normal;
+
+  color: #333;
 }
 
-header {
-  font-size: 0.5rem;
+/*  */
+
+#main-content {
+  padding: 20px;
+}
+
+/* Header - dark background with centered text */
+.header {
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  /* Missing: proper alignment */
   text-align: center;
-  padding: 1rem 2rem;
 }
 
-nav {
-  font-size: 0.8rem;
-  padding: 0.4rem 0rem;
-}
-
-nav ul {
-  list-style-type: none;
+.header h1 {
   margin: 0;
-  /* padding: 1rem 0; */
-  display: flex;
-  justify-content: center;
+}
+
+/* Navigation - horizontal inline menu with hover effects */
+nav {
+  text-align: center;
+}
+nav ul {
+  list-style: none;
+  padding: 20px;
 }
 
 nav ul li {
-  margin: 0 1.5rem;
+  display: inline-block;
+  margin-right: 20px;
 }
-
 nav ul li a {
   text-decoration: none;
-  color: #172c47;
-  font-weight: 500;
-  font-style: normal;
+  color: #333;
+  transition: color 0.3s ease;
+}
+nav ul li a:hover {
+  color: #007bff;
   transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-  color: yellowgreen;
+/* Pseudo-class: focus state for keyboard navigation accessibility */
+nav ul li a:focus {
+  color: #0056b3;
+  outline: none;
 }
 
-main {
-  /* padding: .5rem; */
-  font-size: 0.9rem;
+/* Hero section - full image with overlaid text */
+.hero {
+  color: whitesmoke;
 }
 
-section article {
-  padding: 0.6rem;
-  /* height: 16rem; */
+.hero h2 {
+  font-size: 36px;
 }
 
-section .hero {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-  /* background-color: red; */
-}
-
-.font-knewave {
-  font-family: "Knewave", system-ui;
-  font-weight: 500;
-  font-style: normal;
-  text-decoration: underline;
-  text-decoration-color: yellowgreen;
-  text-decoration-style: wavy;
-  color: #bb9358;
-}
-
-.font-kaushan {
-  font-family: "Kaushan Script", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.font-kavoon {
-  font-family: "Kavoon", serif;
-  font-weight: 400;
-  font-style: normal;
+.hero img {
+  max-width: 100%;
+  /* Missing: alt text handled in HTML, but sizing issues here */
+  height: auto;
 }
 
 .hero h2 {
   position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  font-family: "Londrina Outline", sans-serif;
-  font-weight: 800;
-  /* font-style: normal; */
-  font-size: 4rem;
-}
-
-.hero h2 span {
-  /* color: #ff6347; */
-  font-weight: 900;
-  font-weight: bolder;
-  /* font-family: "Knewave", system-ui; */
-}
-
-.hero p {
-  position: absolute;
   top: 46%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff;
-  font-size: 1.4rem;
-  text-align: center;
-  width: 24rem;
+}
+.hero p {
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.hero img {
-  width: 100%;
-  height: 32rem;
-  /* border-radius: .8rem */
-}
-
-section .intro {
-  background-color: #172c47;
-  color: #fff;
-  padding: 1rem;
-  height: 16rem;
+/* Intro section - centered content with padding */
+.intro {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-}
-.intro h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-  color: #fff;
-}
-.intro p {
-  /* width: 50%; */
-  margin-top: 2rem;
 }
 
-footer {
-  background-color: #172c47;
-  color: gray;
+.intro h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* Styling for the projects page - two-column grid layout*/
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+
+  gap: 20px;
+  padding: 20px;
+}
+.projects article {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
   text-align: center;
-  padding: 1rem 0;
+}
+.projects article h2 {
+  margin-top: 0;
+}
+.projects article img {
   width: 100%;
-  font-size: small;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* About page - two column flex layout */
+
+.about {
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.about article {
+  width: 60%;
+  text-align: center;
+}
+
+/* Aside panel with portfolio photo and skills table */
+.about aside {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.about aside img {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  border: gray solid 4px;
+  padding: 10px;
+}
+
+/* Contact section - centered heading */
+.contact h2 {
+  text-align: center;
+}
+
+/* Form container styling */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+/* Form input styling */
+form input {
+  display: block;
+  margin: 10px 0;
+}
+
+/* Form fieldset styling */
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+legend {
+  font-weight: bold;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Text and email input styling */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Pseudo-class: focus state for form inputs - accessibility */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: 2px solid #007bff;
+}
+
+textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Submit button with hoveer transition */
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Skills table styling with alteranting row colours */
+.skills-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+/* Skills table cells */
+.skills-table th,
+.skills-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Skills table header */
+.skills-table th {
+  background-color: #f2f2f2;
+}
+
+/* Alternating row colors for readability */
+.skills-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.skills-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Missing: Box model demonstration (margin, padding, border) */
+/* Missing: Block vs inline elements styling */
+/* Missing: Text and colour styling variety */
+/* Missing: Table styling */
+
+.footer {
+  background-color: gray;
+  color: white;
+  padding: 20px;
+  /* Wrong alignment */
+  text-align: center;
 }
 
 footer a {
   color: #fff;
   text-decoration: none;
-  font-weight: 500;
-  font-style: normal;
 }
 
 footer a:hover {
@@ -161,3 +291,5 @@ footer a:hover {
   color: yellowgreen;
   transition: color 0.3s ease;
 }
+
+/* Code quality issues: inconsistent spacing, poor naming, no comments */
