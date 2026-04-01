@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
 
-    <!-- imported fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Kaushan+Script&family=Kavoon&family=Knewave&family=Londrina+Outline&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Questrial&display=swap"
       rel="stylesheet"
     />
 
@@ -37,67 +36,93 @@
     </nav>
 
     <main>
-      <section>
+      <section class="contact">
         <article>
           <h2>Get In Touch</h2>
 
           <form>
-            <label for="name">First Name:</label>
-            <input
-              type="text"
-              placeholder="Name"
-              id="name"
-              minlength="2"
-              required
-            />
-            <label for="email">Email Address:</label>
-            <input type="email" placeholder="Email" id="email" required />
-            <label for="message">Message:</label>
-            <textarea
-              placeholder="Message"
-              id="message"
-              minlength="10"
-              maxlength="100"
-              required
-            ></textarea>
+            <fieldset class="form-row">
+              <legend>Contact Information</legend>
+              <label for="name">Full Name:</label>
+              <input
+                type="text"
+                placeholder="Name"
+                id="name"
+                minlength="2"
+                required
+              />
+              <label for="email">Email Address:</label>
+              <input type="email" placeholder="Email" id="email" required />
+              <label for="message">Message:</label>
+              <textarea
+                placeholder="Type your message here..."
+                id="message"
+                minlength="10"
+                maxlength="100"
+                required
+              ></textarea>
+            </fieldset>
 
             <fieldset>
               <legend>Do you want to be contacted?</legend>
-              <input
-                type="radio"
-                id="doContact"
-                name="contact"
-                value="yes"
-                checked
-              />
-              <label for="doContact">Yes</label><br />
-              <input type="radio" id="noneContact" name="contact" value="no" />
-              <label for="noneContact">No</label><br />
+              <label for="doContact">
+                <input
+                  type="radio"
+                  id="doContact"
+                  name="contact"
+                  value="yes"
+                  checked
+                />
+                Yes</label
+              >
+              <label for="noneContact">
+                <input
+                  type="radio"
+                  id="noneContact"
+                  name="contact"
+                  value="no"
+                />
+                No</label
+              >
             </fieldset>
 
             <fieldset class="source">
               <legend>How did you hear about me?</legend>
-              <input
-                type="checkbox"
-                id="linkedin"
-                name="source"
-                value="linkedin"
-              />
-              <label for="linkedin">LinkedIn</label><br />
-              <input
-                type="checkbox"
-                id="dribbble"
-                name="source"
-                value="dribbble"
-              />
-              <label for="dribbble">Dribbble</label><br />
-              <input type="checkbox" id="social" name="source" value="social" />
-              <label for="social">Social Media</label><br />
-              <input type="checkbox" id="other" name="source" value="other" />
-              <label for="other">Other</label><br />
+              <label for="linkedin">
+                <input
+                  type="checkbox"
+                  id="linkedin"
+                  name="source"
+                  value="linkedin"
+                />
+                LinkedIn</label
+              >
+              <label for="dribbble">
+                <input
+                  type="checkbox"
+                  id="dribbble"
+                  name="source"
+                  value="dribbble"
+                />
+                Dribbble</label
+              >
+              <label for="social">
+                <input
+                  type="checkbox"
+                  id="social"
+                  name="source"
+                  value="social"
+                />
+                Social Media
+              </label>
+              <label for="other">
+                <input type="checkbox" id="other" name="source" value="other" />
+                Other
+              </label>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="newsletter">
+              <legend>Newsletter Subscription</legend>
               <label for="newsletter">
                 <input
                   type="checkbox"
@@ -117,7 +142,8 @@
 
     <footer class="footer">
       <p>
-        Contact me at <a href="mailto:email@example.com">email@example.com</a>
+        Contact me at
+        <a href="mailto:molokochrisp742@gmail.com">molokochrisp742@gmail.com</a>
       </p>
     </footer>
   </body>
