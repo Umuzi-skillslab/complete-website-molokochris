@@ -7,30 +7,27 @@
 /* Base body styles - font, colour, margin, padding */
 
 body {
-  font-family: "Questrial", sans-serif;
+  font-family: "Questrial", Arial;
   font-weight: 400;
   font-style: normal;
-
   color: #333;
 }
 
-/*  */
-
 #main-content {
-  padding: 20px;
+  padding: 0 0.625rem;
 }
 
 /* Header - dark background with centered text */
 .header {
   background-color: #222;
   color: white;
-  padding: 20px;
-  /* Missing: proper alignment */
+  padding: 0.8rem 0;
   text-align: center;
 }
 
 .header h1 {
   margin: 0;
+  font-size: 1rem;
 }
 
 /* Navigation - horizontal inline menu with hover effects */
@@ -39,12 +36,12 @@ nav {
 }
 nav ul {
   list-style: none;
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 nav ul li {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 1.25rem;
 }
 nav ul li a {
   text-decoration: none;
@@ -62,18 +59,23 @@ nav ul li a:focus {
   outline: none;
 }
 
+/* Pseudo-class: active state for keyboard navigation accessibility */
+nav ul li a:active {
+  color: yellowgreen;
+  transition: color 0.3s ease;
+}
+
 /* Hero section - full image with overlaid text */
 .hero {
   color: whitesmoke;
 }
 
 .hero h2 {
-  font-size: 36px;
+  font-size: 2.25rem;
 }
 
 .hero img {
   max-width: 100%;
-  /* Missing: alt text handled in HTML, but sizing issues here */
   height: auto;
 }
 
@@ -92,7 +94,7 @@ nav ul li a:focus {
 
 /* Intro section - centered content with padding */
 .intro {
-  padding: 30px;
+  padding: 1.875rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -100,37 +102,51 @@ nav ul li a:focus {
 }
 
 .intro h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
+  font-size: 1.75rem;
+  margin-bottom: 0.625rem;
 }
 
 /* Styling for the projects page - two-column grid layout*/
 .projects {
   display: grid;
-  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, minmax(10rem, 1fr));
 
-  gap: 20px;
-  padding: 20px;
+  gap: 1.25rem;
+  padding: 1.25rem 4rem;
 }
 .projects article {
   background-color: #f4f4f4;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 1.25rem 1rem;
+  border-radius: 0.5rem;
   text-align: center;
 }
 .projects article h2 {
-  margin-top: 0;
+  margin: 0.625rem 0;
+  font-size: 1rem;
 }
 .projects article img {
   width: 100%;
   height: auto;
-  border-radius: 4px;
+  border-radius: 0.25rem;
+}
+.projects article p {
+  margin-top: 0.625rem;
+  font-size: 0.8125rem;
+}
+
+/* Hover effects for the projects */
+.projects article:hover {
+  background-color: #e0e0e0;
+  cursor: pointer;
+}
+.projects article:hover img {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
 /* About page - two column flex layout */
-
 .about {
-  padding: 20px;
+  padding: 1.25rem 1rem;
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
@@ -141,20 +157,36 @@ nav ul li a:focus {
   text-align: center;
 }
 
+.about article h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.625rem;
+}
+
+/* pseudo classes for article paragraph when highlighted */
+.about article p::selection {
+  background-color: yellowgreen;
+  color: white;
+}
+
 /* Aside panel with portfolio photo and skills table */
 .about aside {
   background-color: #f4f4f4;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 1.25rem;
+  border-radius: 0.5rem;
   text-align: center;
 }
 
+.about aside h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
 .about aside img {
-  width: 200px;
+  width: 12.5rem;
   height: auto;
   border-radius: 50%;
-  border: gray solid 4px;
-  padding: 10px;
+  border: gray solid 0.25rem;
+  padding: 0.625rem;
 }
 
 /* Contact section - centered heading */
@@ -166,23 +198,23 @@ nav ul li a:focus {
 form {
   max-width: 600px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 1.25rem;
   background-color: #f9f9f9;
-  border-radius: 8px;
+  border-radius: 0.5rem;
 }
 
 /* Form input styling */
 form input {
   display: block;
-  margin: 10px 0;
+  margin: 0.625rem 0;
 }
 
 /* Form fieldset styling */
 fieldset {
   border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 10px;
-  margin-bottom: 15px;
+  border-radius: 0.25rem;
+  padding: 0.625rem;
+  margin-bottom: 0.9375rem;
 }
 
 legend {
@@ -191,9 +223,11 @@ legend {
 }
 
 label {
-  display: block;
-  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.3125rem;
   font-weight: bold;
+  gap: 0.5rem;
 }
 
 /* Text and email input styling */
@@ -201,9 +235,9 @@ input[type="text"],
 input[type="email"],
 textarea {
   width: 100%;
-  padding: 8px;
+  padding: 0.5rem;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   box-sizing: border-box;
 }
 
@@ -212,46 +246,50 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
   border-color: #007bff;
-  outline: 2px solid #007bff;
+  outline: 0.125rem solid #007bff;
 }
 
 textarea {
-  height: 100px;
+  height: 6.25rem;
   resize: vertical;
 }
 
 input[type="radio"],
 input[type="checkbox"] {
-  margin-right: 5px;
+  margin-right: 0.3125rem;
 }
 
-/* Submit button with hoveer transition */
+/* Submit button with hover transition */
 button {
   background-color: #007bff;
   color: white;
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 button:hover {
   background-color: #0056b3;
 }
 
-/* Skills table styling with alteranting row colours */
+button:active {
+  background-color: #004080;
+}
+
+/* Skills table styling with alternating row colours */
 .skills-table {
   width: 100%;
   border-collapse: collapse;
-  margin: 20px 0;
+  margin: 1.25rem 0;
 }
 
 /* Skills table cells */
 .skills-table th,
 .skills-table td {
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 0.5rem;
   text-align: left;
 }
 
@@ -268,16 +306,10 @@ button:hover {
   background-color: #f1f1f1;
 }
 
-/* Missing: Box model demonstration (margin, padding, border) */
-/* Missing: Block vs inline elements styling */
-/* Missing: Text and colour styling variety */
-/* Missing: Table styling */
-
 .footer {
   background-color: gray;
   color: white;
-  padding: 20px;
-  /* Wrong alignment */
+  padding: 1.25rem;
   text-align: center;
 }
 
@@ -291,5 +323,3 @@ footer a:hover {
   color: yellowgreen;
   transition: color 0.3s ease;
 }
-
-/* Code quality issues: inconsistent spacing, poor naming, no comments */
