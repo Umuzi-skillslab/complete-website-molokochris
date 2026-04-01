@@ -1,6 +1,6 @@
 # Portfolio Website
 
-### Moloko Chris Poopedi | Umuzi x BBD Capstone 1
+### Moloko Chris Poopedi | Capstone 1 - Debug Portfolio Website
 
 ---
 
@@ -172,13 +172,6 @@ To view this website locally:
 ---
 
 ## Reflection
-
-<!-- ADD YOUR OWN REFLECTION HERE -->
-<!-- Talk about: -->
-<!-- - What was the most challenging part of debugging the starter code -->
-<!-- - How you approached identifying the errors -->
-<!-- - What you learned from the process -->
-<!-- - Any specific CSS or HTML concepts that became clearer through this project -->
 
 The most challenging part of the project was identifying and fixing the structural HTML errors, particularly the incorrect use of '<div>' tags throughout the entire codebase where semantic elements were required. The started code had no semantic structure at all, let alone navigation on the home page to navigate. This meant that i had to rebuild the document from the ground up while preserving the original content and aesthetic the builder was going for.
 
