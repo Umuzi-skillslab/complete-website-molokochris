@@ -1,0 +1,96 @@
+ISSUES IDENTIFICATION DOCUMENT
+Capstone 1 - Debug Portfolio Website
+Author: Moloko Chris Poopedi
+
+---
+
+HTML ISSUES
+
+GLOBAL ISSUES (affecting all 4 pages):
+1. Missing charset meta tag on all pages
+2. Missing viewport meta tag on all pages
+3. Invalid navigation nesting. Anchor tags wrapping list items instead
+   of list items wrapping anchor tags
+4. Navigation links using href="/" for home — breaks when opened as
+   local files
+5. Inconsistent DOCTYPE declaration across pages
+
+INDEX.HTML:
+6. No navigation to link pages
+7. Non-descriptive alt text on hero image
+
+PROJECTS.HTML:
+8. Non-descriptive alt text on all three project images
+
+ABOUT.HTML:
+9. h3 element incorrectly nested inside a caption element that is invalid HTML
+   that fails W3C validation
+10. Heading hierarchy violation. h3 used as first heading in a
+    standalone section instead of h2
+11. Generic and non-descriptive alt text on profile image
+
+CONTACT.HTML:
+12. Email input had type="text" instead of type="email"
+13. Email label had for="name" instead of for="email"
+14. Message label had for="name" instead of for="message"
+15. Only 3 input types present
+16. Submit button missing type="submit" attribute
+17. Only one validation attribute type used
+18. textarea element missing the required attribute
+
+---
+
+CSS ISSUES
+
+SELECTOR ISSUES:
+1. Only 2-3 selector types used
+2. No pseudo-classes used anywhere
+3. No combination selectors used
+4. No ID selector present
+
+MISSING STYLES:
+5. Navigation styling completely absent
+6. Table styling completely absent
+7. Form styling incomplete
+8. No hover effects on any interactive elements
+
+BOX MODEL ISSUES:
+9. No border properties used anywhere
+10. Insufficient margin and padding usage throughout
+
+COLOUR AND CONTRAST ISSUES:
+11. Hero section used lightblue background which fails 4.5:1 contrast ratio
+12. Footer text alignment set to left instead of center
+
+LAYOUT ISSUES:
+13. No flexbox or positioning used for layout
+
+CODE QUALITY ISSUES:
+14. Inconsistent spacing and formatting throughout
+15. No meaningful comments
+
+---
+
+APPROACH TO FIXING
+
+All HTML pages were updated to include proper charset and viewport meta
+tags. Navigation nesting was corrected across all four pages to use li
+elements wrapping anchor tags. Nav hrefs were updated to relative paths
+for local file compatibility. DOCTYPE declaration was made consistent
+across all pages.
+
+The contact form was rebuilt with 5 input types, the text, email, textarea,
+radio, and checkbox with correct label associations and required,
+minlength, and maxlength validation attributes. The table caption was
+fixed by removing the invalid h3 nesting. Heading hierarchy was corrected
+by consolidating the photo section under the background article.
+Descriptive alt text was added to all images.
+
+For CSS, the stylesheet was expanded to use 5+ selector types including
+element, class, ID, descendant, and pseudo-class. Hover, focus, active,
+and nth-child pseudo-classes were added throughout. Navigation, table,
+and form styles were completed. Border, margin, and padding properties
+were applied consistently across all elements. The lightblue hero
+background was replaced to fix the contrast issue. The footer was
+centre-aligned. Meaningful comments were added throughout explaining
+each section of the stylesheet.

@@ -1,30 +1,110 @@
-<!DOCTYPE html>
-<html>
-<head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <div class="header">
-        <h1>About Me</h1>
-    </div>
-    
-    <div>
-        <h2>My Background</h2>
-        <p>I have been working in web development for several years.</p>
-        
-        <h3>Skills</h3>
-        <!-- Table should be here but is missing -->
-        <p>HTML, CSS, JavaScript</p>
-    </div>
-    
-    <div>
-        <h3>My Photo</h3>
-        <img src="images/profile.jpg">
-    </div>
-    
-    <div class="footer">
-        <p>Contact me at email@example.com</p>
-    </div>
-</body>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Questrial&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>About Me</h1>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html"> Home</a>
+        </li>
+        <li>
+          <a href="projects.html"> Projects </a>
+        </li>
+        <li>
+          <a href="about.html"> About </a>
+        </li>
+        <li>
+          <a href="contact.html"> Contact </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <section class="about">
+        <article>
+          <h2>My Background</h2>
+          <p>
+            I’m Chris, a South African developer and designer passionate about
+            building practical, impactful digital products. I specialise in web
+            and mobile development using modern technologies like React, React
+            Native, and Next.js, with a strong focus on performance, usability,
+            and clean design.<br /><br />
+            My journey into development started with a curiosity for how things
+            work, which grew into a commitment to creating solutions that solve
+            real-world problems. I’ve worked on a range of projects—from mobile
+            apps that leverage smartphone sensors, to platforms that connect
+            local businesses with customers.<br /><br />
+            Currently, I’m focused on building products that empower people and
+            communities. One of my key projects aims to help users discover and
+            support local businesses more easily, while also giving
+            entrepreneurs a platform to grow their visibility. I enjoy working
+            across the full stack, using tools like FastAPI for backend
+            development and Firebase for scalable, cost-efficient
+            infrastructure.<br /><br />
+            I’m particularly interested in building systems that are efficient,
+            accessible, and scalable from day one. Beyond coding, I have a
+            strong interest in product design and user experience. I believe
+            that great software isn’t just functional—it should feel intuitive
+            and seamless to use.<br /><br />
+            My long-term goal is to grow my work into a company that builds
+            meaningful digital solutions, while continuing to learn, experiment,
+            and improve with every project.
+          </p>
+        </article>
+        <aside>
+          <h3>Skills</h3>
+          <table class="skills-table">
+            <thead>
+              <tr>
+                <th>Language</th>
+                <th>Years</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>HTML, CSS, JavaScript</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>ReactJS</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>React Native</td>
+                <td>3</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>My Photo</h3>
+          <img
+            src="images/profile.jpg"
+            alt="Professional profile photo of the developer"
+          />
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Contact me at
+        <a href="mailto:molokochrisp742@gmail.com">molokochrisp742@gmail.com</a>
+      </p>
+    </footer>
+  </body>
 </html>
