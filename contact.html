@@ -1,30 +1,150 @@
-<!DOCTYPE html>
-<html>
-<head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <div class="header">
-        <h1>Contact Me</h1>
-    </div>
-    
-    <div>
-        <h2>Get In Touch</h2>
-        
-        <form>
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Email">
-            <textarea placeholder="Message"></textarea>
-            
-            <!-- Missing: labels, more input types, validation -->
-            
-            <button>Send</button>
-        </form>
-    </div>
-    
-    <div class="footer">
-        <p>Contact me at email@example.com</p>
-    </div>
-</body>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Questrial&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Contact Me</h1>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html"> Home</a>
+        </li>
+        <li>
+          <a href="projects.html"> Projects </a>
+        </li>
+        <li>
+          <a href="about.html"> About </a>
+        </li>
+        <li>
+          <a href="contact.html"> Contact </a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="contact">
+        <article>
+          <h2>Get In Touch</h2>
+
+          <form>
+            <fieldset class="form-row">
+              <legend>Contact Information</legend>
+              <label for="name">Full Name:</label>
+              <input
+                type="text"
+                placeholder="Name"
+                id="name"
+                minlength="2"
+                required
+              />
+              <label for="email">Email Address:</label>
+              <input type="email" placeholder="Email" id="email" required />
+              <label for="message">Message:</label>
+              <textarea
+                placeholder="Type your message here..."
+                id="message"
+                minlength="10"
+                maxlength="100"
+                required
+              ></textarea>
+            </fieldset>
+
+            <fieldset>
+              <legend>Do you want to be contacted?</legend>
+              <label for="doContact">
+                <input
+                  type="radio"
+                  id="doContact"
+                  name="contact"
+                  value="yes"
+                  checked
+                />
+                Yes</label
+              >
+              <label for="noneContact">
+                <input
+                  type="radio"
+                  id="noneContact"
+                  name="contact"
+                  value="no"
+                />
+                No</label
+              >
+            </fieldset>
+
+            <fieldset class="source">
+              <legend>How did you hear about me?</legend>
+              <label for="linkedin">
+                <input
+                  type="checkbox"
+                  id="linkedin"
+                  name="source"
+                  value="linkedin"
+                />
+                LinkedIn</label
+              >
+              <label for="dribbble">
+                <input
+                  type="checkbox"
+                  id="dribbble"
+                  name="source"
+                  value="dribbble"
+                />
+                Dribbble</label
+              >
+              <label for="social">
+                <input
+                  type="checkbox"
+                  id="social"
+                  name="source"
+                  value="social"
+                />
+                Social Media
+              </label>
+              <label for="other">
+                <input type="checkbox" id="other" name="source" value="other" />
+                Other
+              </label>
+            </fieldset>
+
+            <fieldset class="newsletter">
+              <legend>Newsletter Subscription</legend>
+              <label for="newsletter">
+                <input
+                  type="checkbox"
+                  id="newsletter"
+                  name="newsletter"
+                  value="yes"
+                />
+                Sign up for my newsletter
+              </label>
+            </fieldset>
+
+            <button type="submit">Send</button>
+          </form>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Contact me at
+        <a href="mailto:molokochrisp742@gmail.com">molokochrisp742@gmail.com</a>
+      </p>
+    </footer>
+  </body>
 </html>
