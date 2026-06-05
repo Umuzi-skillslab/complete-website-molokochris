@@ -27,7 +27,7 @@ body {
 
 .header h1 {
   margin: 0;
-  font-size: 1rem;
+  font-size: 2rem;
 }
 
 /* Navigation - horizontal inline menu with hover effects */
@@ -67,7 +67,8 @@ nav ul li a:active {
 
 /* Hero section - full image with overlaid text */
 .hero {
-  color: whitesmoke;
+  color: white;
+  position: relative;
 }
 
 .hero h2 {
@@ -79,17 +80,30 @@ nav ul li a:active {
   height: auto;
 }
 
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
 .hero h2 {
   position: absolute;
   top: 46%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 2;
 }
 .hero p {
   position: absolute;
   top: 54%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 2;
 }
 
 /* Intro section - centered content with padding */
@@ -307,19 +321,20 @@ button:active {
 }
 
 .footer {
-  background-color: gray;
+  background-color: #222;
   color: white;
   padding: 1.25rem;
   text-align: center;
 }
 
 footer a {
-  color: #fff;
+  color: #ffeb3b;
   text-decoration: none;
+  font-weight: bold;
 }
 
 footer a:hover {
   text-decoration: underline;
-  color: yellowgreen;
+  color: #fff;
   transition: color 0.3s ease;
 }
